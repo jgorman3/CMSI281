@@ -1,6 +1,4 @@
-CMSI281
-
-Repository for LMU Data Structures Class (CMSI-281)
+#CMSI281 - Repository for LMU Data Structures Class (CMSI-281)
 
 Classwork01
 
