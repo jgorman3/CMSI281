@@ -6,7 +6,7 @@ This repository can be used as a model for the way your assignments will be subm
 You must have the following structure for your own version of the repo:
 
 ## Classwork
-#### Classwork01 - SayHello.java, simple program working with reading input from command line
+#### Classwork01 - SayHello.java, simple program working that reads input from the command line
 #### Classwork02
 #### Classwork03
 #### Classwork04
