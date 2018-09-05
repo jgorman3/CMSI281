@@ -1,6 +1,6 @@
 # CMSI281 - Repository for LMU Data Structures Class
 
-Classwork01
+Classwork01 : SayHello.java, a simple program to become reacclimated with the programming language.
 
 Classwork02
 
