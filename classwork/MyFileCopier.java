@@ -1,4 +1,4 @@
- MyFileCopier.java   1.0.0   5-September-2018
+/** MyFileCopier.java   1.0.0   5-September-2018
 *  Purpose    : Simple Class that reads and writes files
 *  Author     : Joe Gorman
 *  Description: The intent of the exercise is to get experience with
@@ -9,10 +9,8 @@
 */
 
 import java.io.FileReader;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
-import java.lang.StringBuffer;
 import copiersupport.*;
 
 public class MyFileCopier {
@@ -20,7 +18,6 @@ public class MyFileCopier {
   public static final int END_OF_FILE = -1;
   //main constructor
   public MyFileCopier() {
-    //MyFileCopier filecopier = new MyFileCopier();
   }
   //main method
   public static void main(String[] args) throws IOException{
@@ -29,7 +26,7 @@ public class MyFileCopier {
     String filename = myFile.nextLine();
     SourceFile src = new SourceFile(filename);
     String buffer = src.readtoString(filename);
-    System.out.println(buffer);
-    //TargetFile target = new TargetFile(filename, buffer);
+    TargetFile target = new TargetFile(filename, buffer);
+    target.fileCreator();
   }
 }
