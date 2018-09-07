@@ -27,40 +27,11 @@ public class TargetFile {
 
   //copy file method
   public static void fileCreator() throws IOException {
+    String newfile = file + ".copy";
     try
-    (Writer writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file + ".copy"), "utf-8")));
+    (Writer writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(newfile), "utf-8")))
         {
           writer.write(string_buff);
+          writer.close();
         }
-  }
-    /*BufferedWriter out = null;
-    String new_filename = file + ".copy";
-    File newf = new File("~/Documents/CMSI-281/");
-    if (!newf.exists()) {
-      newf.createNewFile();
-    }
-    FileWriter newfile = new FileWriter(newf);
-    try {
-      out = new BufferedWriter(newfile);
-      out.write(string_buff);
-    }
-    finally {
-			if (out != null)
-				out.close();
-		}*/
-      /*out = new FileWriter(newfile);
-      int c;
-      while ((c = in.read()) != END_OF_FILE) {
-         out.write(c);
-      }
-    }
-    finally{
-      if (in != null) {
-        in.close();
-      }
-      if (out != null) {
-        out.close();
-      }
-    }
-  }*/
   }
