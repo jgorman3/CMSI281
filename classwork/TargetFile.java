@@ -8,26 +8,47 @@
 *               line or terminal window driven.
 */
 package copiersupport;
-import java.io.FileReader;
-import java.io.FileWriter;
+import java.io.BufferedWriter;
+import java.io.OutputStreamWriter;
+import java.io.FileOutputStream;
+import java.io.Writer;
+import java.io.PrintWriter;
 import java.io.IOException;
 
 public class TargetFile {
-  public static final int END_OF_FILE = -1;
-  public StringBuffer string_buff;
-  public String file;
+  public static String string_buff;
+  public static String file;
+
   //main constructor
-  public TargetFile(String filename , StringBuffer buffer) {
+  public TargetFile(String filename , String buffer) {
     file = filename;
     string_buff = buffer;
   }
-  public void main(String[] args) throws IOException{
-    FileWriter out = null;
-    FileReader in = null;
+
+  //copy file method
+  public static void fileCreator() throws IOException {
+    try
+    (Writer writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file + ".copy"), "utf-8")));
+        {
+          writer.write(string_buff);
+        }
+  }
+    /*BufferedWriter out = null;
     String new_filename = file + ".copy";
-    try{
-      in  = new FileReader(file);
-      out = new FileWriter(new_filename);
+    File newf = new File("~/Documents/CMSI-281/");
+    if (!newf.exists()) {
+      newf.createNewFile();
+    }
+    FileWriter newfile = new FileWriter(newf);
+    try {
+      out = new BufferedWriter(newfile);
+      out.write(string_buff);
+    }
+    finally {
+			if (out != null)
+				out.close();
+		}*/
+      /*out = new FileWriter(newfile);
       int c;
       while ((c = in.read()) != END_OF_FILE) {
          out.write(c);
@@ -41,6 +62,5 @@ public class TargetFile {
         out.close();
       }
     }
-    System.out.println(out.toString());
+  }*/
   }
-}
