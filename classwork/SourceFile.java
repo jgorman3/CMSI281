@@ -9,9 +9,8 @@
 */
 package copiersupport;
 import java.io.FileReader;
-import java.io.FileWriter;
 import java.io.IOException;
-import java.lang.StringBuffer;
+import java.nio.file.*;
 
 public class SourceFile {
   public static final int END_OF_FILE = -1;
@@ -23,21 +22,9 @@ public class SourceFile {
   }
 
   //readtoString returns filedata as string
-  public StringBuffer readtoString(String filename) throws IOException{
-    int i;
-    FileReader in = null;
-    in  = new FileReader(file);
-    StringBuffer filedata = new StringBuffer();
-    try {
-      while ((i= in.read()) != END_OF_FILE) {
-        filedata.append(in);
-      }
-    }
-    finally {
-      if (in != null) {
-               in.close();
-      }
-    }
-    return filedata;
+  public String readtoString(String filename) throws IOException{
+    String file_data = null;
+    file_data = new String(Files.readAllBytes(Paths.get(file)));
+    return file_data;
   }
 }
