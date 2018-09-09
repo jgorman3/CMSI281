@@ -5,7 +5,9 @@ Classwork02 Evaluation
 Nice job on this assignment, except your directory
 structure is still incorrect.
 
-Please correct it for Classwork02, and make it look
+Please correct it for Classwork02, and move the java files
+into the corrected directory.  Then create the rest of your
+classwork and homework file hierarchy, and make it look
 like what is specified on the syllabus page.  If this
 is not done this week, it will start costing you points
 on your submissions.  Grace period is over, sir!
