@@ -1,0 +1,35 @@
+
+Classwork02 Evaluation
+======================
+
+Nice job on this assignment, except your directory
+structure is still incorrect.
+
+Please correct it for Classwork02, and make it look
+like what is specified on the syllabus page.  If this
+is not done this week, it will start costing you points
+on your submissions.  Grace period is over, sir!
+
+scores:
+=============================
+MyFileCopier.java
+   prompts user for filename  [1 pt]
+   calls Source constructor   [1 pt]
+   calls getter method        [1 pt]
+   calls Target constructor   [1 pt]
+Source.java
+   reads file completely      [1 pt]
+   has getter or returning    [1 pt]
+Target.java
+   writes file completely     [1 pt]
+file hdrs (3)                 [3 pt]
+no tabs                       [1 pt]
+indenting consistent          [1 pt]
+descriptive variable names    [1 pt]
+
+total possible points         13 points
+
+
+you got 13 out of 13 which is 100% which is an A-plus,
+
+
