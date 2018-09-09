@@ -10,6 +10,29 @@ like what is specified on the syllabus page.  If this
 is not done this week, it will start costing you points
 on your submissions.  Grace period is over, sir!
 
+Unfortunately, your TargetFile.java does not compile.  The
+problem is your try/catch block is incorrectly specified.
+You only have the "try" part, the declaration of the "writer"
+object is out of order, and there is no "catch" part.  You
+were also missing a closing brace near the bottom of the file.
+
+Here is what I had to make your file look like to get it to
+compile:
+
+.......
+  //copy file method
+  public static void fileCreator() throws IOException {
+    String newfile = file + ".copy";
+    try {
+      Writer writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(newfile), "utf-8"));
+      writer.write(string_buff);
+      writer.close();
+    }
+    catch( IOException ioe ) {};
+  }
+.......
+
+
 scores:
 =============================
 MyFileCopier.java
@@ -21,7 +44,7 @@ Source.java
    reads file completely      [1 pt]
    has getter or returning    [1 pt]
 Target.java
-   writes file completely     [1 pt]
+   writes file completely     [1 pt]     0 point, file won't compile
 file hdrs (3)                 [3 pt]
 no tabs                       [1 pt]
 indenting consistent          [1 pt]
@@ -30,6 +53,6 @@ descriptive variable names    [1 pt]
 total possible points         13 points
 
 
-you got 13 out of 13 which is 100% which is an A-plus,
+you got 12 out of 13 which is 92.31% which is an A-minus,
 
 
