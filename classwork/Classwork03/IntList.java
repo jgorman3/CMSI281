@@ -1,5 +1,4 @@
 import java.util.Arrays;
-import EmptyListException.*;
 
 public class IntList implements IntListInterface {
    private int[] theList;
@@ -39,36 +38,36 @@ public class IntList implements IntListInterface {
    }
 
    // we've gotta have this to actually get things to compile
-   public boolean insertValueAtIndex( int value, int index ) {
-     /*if (index > theList.length) {
-       new_length = index + STARTING_SIZE;
+   public boolean insertValueAtIndex( int value, int index ) throws EmptyListException {
+     if (index < theList.length){
        newList = new int[theList.length];
        for (int i = 0; i < index; i++){
-         theList[i] = newList[i];
+         newList[i] = theList[i];
        }
        newList[index] = value;
-       for (int i = index + 1; i < theList.length; i++){
-         newList[i] = theList[i - 1];
+       for (int i = index + 1; i < newList.length; i++){
+         newList[i] = theList[i-1];
        }
-       System.out.println(Arrays.toString(newList));
+       theList = newList;
+       System.out.println(Arrays.toString(theList));
        return true;
      }
-     else if (index < 0) {
-       throw new ArrayIndexOutOfBoundsException("List is Empty!");
-     }*/
-     //else {
-     newList = new int[theList.length];
-     for (int i = 0; i < index; i++){
-       newList[i] = theList[i];
+     else if (index >= theList.length){
+       new_length = STARTING_SIZE + index;
+       newList = new int[new_length];
+       for (int i = 0; i < theList.length; i++){
+         newList[i] = theList[i];
+       }
+       for (int i = theList.length; i < value; i++){
+         newList[i] = 0;
+       }
+       newList[index] = value;
+       return true;
      }
-     newList[index] = value;
-     for (int i = index + 1; i < newList.length; i++){
-       newList[i] = theList[i-1];
+     else {
+       throw new EmptyListException("The List is Empty!");
      }
-     theList = newList;
-     System.out.println(Arrays.toString(theList));
-     return true;
-     }
+    }
 
   public boolean checkIndex(int index) {
     if (index <= theList.length){
@@ -117,6 +116,8 @@ public class IntList implements IntListInterface {
       list.append( 13 );
       list.append( 17 );
       list.append( 19 );
+      //added appends to test insertValueAtIndex();
+      list.append( 21 );
       System.out.println( list.getValueAtIndex( 7 ) );      // should return the value 19
       //System.out.println( list.removeValueAtIndex( 3 ) );   // should return the value 7
       System.out.println( list.getValueAtIndex( 3 ) );      // should return the value 11
