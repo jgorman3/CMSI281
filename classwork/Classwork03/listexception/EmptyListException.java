@@ -4,8 +4,9 @@
 *  Description: Implements exception for empty lists
 */
 package listexception;
+import java.io.*;
 
-public class EmptyListException extends Exception {
+public class EmptyListException extends RuntimeException {
   public EmptyListException(String message) {
     super(message);
   }
