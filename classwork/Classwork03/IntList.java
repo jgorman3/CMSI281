@@ -1,3 +1,8 @@
+/** IntList.java   1.0.0   13-September-2018
+*  Purpose    : Class behind the Interface IntListInterface.java
+*  Author     : Joe Gorman
+*  Description: Implements all methods necessary for IntListInterface.java
+*/
 import java.util.Arrays;
 
 public class IntList implements IntListInterface {
@@ -123,6 +128,7 @@ public class IntList implements IntListInterface {
       System.out.println( list.getValueAtIndex( 3 ) );      // should return the value 11
       System.out.println( list.insertValueAtIndex(6,3));
       System.out.println( list.prepend(1));
+      //the line below throws an out of bounds error
       //System.out.println( list.getValueAtIndex( 18 ) );     // just to see what happens
 
    }
