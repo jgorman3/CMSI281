@@ -19,10 +19,10 @@ public class IntList implements IntListInterface {
       size = 0;
    }
 
-   public int getValueAtIndex( int index ) throws ArrayIndexOutOfBoundsException {
+   public int getValueAtIndex( int index ) throws ArrayIndexOutOfBoundsException, EmptyListException {
       if( size == 0 ) {
          //throw new EmptyListException( "The list is empty!" );   // maybe not the best...
-         throw new ArrayIndexOutOfBoundsException("The list is empty!" );
+         throw new EmptyListException("The list is empty!" );
       } else if( index > size ) {
          throw new ArrayIndexOutOfBoundsException( "The index value is too large" );
       } else if( index < 0 ) {
@@ -44,7 +44,7 @@ public class IntList implements IntListInterface {
    }
 
    // we've gotta have this to actually get things to compile
-   public boolean insertValueAtIndex( int value, int index ) throws EmptyListException {
+   public boolean insertValueAtIndex( int value, int index ) throws ArrayIndexOutOfBoundsException {
      if ((index < theList.length) && (index >= 0)){
        newList = new int[theList.length];
        for (int i = 0; i < index; i++){
@@ -72,7 +72,7 @@ public class IntList implements IntListInterface {
        return true;
      }
      else {
-       throw new EmptyListException("The List is Empty!");
+       throw new ArrayIndexOutOfBoundsException("The index value is too small");
      }
     }
 
@@ -90,11 +90,11 @@ public class IntList implements IntListInterface {
     return true;
   }
 
-   public int removeValueAtIndex( int index ) throws ArrayIndexOutOfBoundsException {
+   public int removeValueAtIndex( int index ) throws ArrayIndexOutOfBoundsException, EmptyListException{
       int value = theList[index];
       if( size == 0 ) {
          //throw new EmptyListException("The list is empty!");   // maybe not the best...
-         throw new ArrayIndexOutOfBoundsException("The list is empty!");
+         throw new EmptyListException("The list is empty!");
       } else if( index > size ) {
          throw new ArrayIndexOutOfBoundsException( "The index value is too large" );
       } else if( index < 0 ) {
