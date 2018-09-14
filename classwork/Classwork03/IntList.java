@@ -4,6 +4,7 @@
 *  Description: Implements all methods necessary for IntListInterface.java
 */
 import java.util.Arrays;
+import listexception.*;
 
 public class IntList implements IntListInterface {
    private int[] theList;
@@ -44,7 +45,7 @@ public class IntList implements IntListInterface {
 
    // we've gotta have this to actually get things to compile
    public boolean insertValueAtIndex( int value, int index ) throws EmptyListException {
-     if (index < theList.length){
+     if ((index < theList.length) && (index >= 0)){
        newList = new int[theList.length];
        for (int i = 0; i < index; i++){
          newList[i] = theList[i];
@@ -67,6 +68,7 @@ public class IntList implements IntListInterface {
          newList[i] = 0;
        }
        newList[index] = value;
+       System.out.println(Arrays.toString(newList));
        return true;
      }
      else {
@@ -130,6 +132,5 @@ public class IntList implements IntListInterface {
       System.out.println( list.prepend(1));
       //the line below throws an out of bounds error
       //System.out.println( list.getValueAtIndex( 18 ) );     // just to see what happens
-
    }
 }
