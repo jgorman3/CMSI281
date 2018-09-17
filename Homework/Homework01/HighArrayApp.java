@@ -10,12 +10,15 @@ class HighArrayApp
       arr.insert(99);
       arr.insert(44);
       arr.insert(55);
+      arr.insert(55);
+      arr.insert(130);
       arr.insert(22);
       arr.insert(88);
       arr.insert(11);
       arr.insert(00);
       arr.insert(66);
       arr.insert(33);
+      arr.insert(55);
 
       arr.display();                // display items
 
@@ -26,9 +29,12 @@ class HighArrayApp
          System.out.println("Can't find " + searchKey);
 
       arr.delete(00);               // delete 3 items
-      arr.delete(55);
+      arr.delete(44);
       arr.delete(99);
 
       arr.display();                // display items again
+
+      System.out.println(arr.getMax());
+      arr.noDups();
       }  // end main()
    }  // end class HighArrayApp
