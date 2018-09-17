@@ -6,10 +6,13 @@ class HighArray
    {
    private long[] a;                 // ref to array a
    private int nElems;               // number of data items
+   private long EMPTY_ARRAY = -1;    // used in getMax(), denotes empty array
+   private long difference;
+   private long max_value = 0;
    //-----------------------------------------------------------
    public HighArray(int max)         // constructor
       {
-      a = new long[max];                 // create the array
+      this.a = new long[max];                 // create the array
       nElems = 0;                        // no items yet
       }
    //-----------------------------------------------------------
@@ -24,6 +27,35 @@ class HighArray
       else
          return true;                    // no, found it
       }  // end find()
+
+    public long getMax() {
+      if (nElems == 0) {
+        return EMPTY_ARRAY;
+      }
+      else {
+        for (int i = 0; i < nElems; i++) {
+          if (a[i] > max_value) {
+            max_value = a[i];
+          }
+        }
+      }
+      return max_value;
+    }
+
+    public void noDups() {
+      int count = 0;
+      for (int j = 0; j < nElems; j++) {
+        for(int i = j+1; i < nElems; i++) {
+          if (a[j] == a[i]) {
+            a[i] = -1;
+            count++;
+          }
+        }
+      }
+      for (int l = 0; l < count; l++) {
+        this.delete(-1);
+      }
+    }
    //-----------------------------------------------------------
    public void insert(long value)    // put element into array
       {
@@ -57,3 +89,4 @@ class HighArray
    //-----------------------------------------------------------
    }  // end class HighArray
 ////////////////////////////////////////////////////////////////
+
