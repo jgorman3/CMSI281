@@ -1,3 +1,9 @@
+// HighArrayApp.java   1.0.0   18-September-2018
+// Purpose     : Class that runs HighArray.java
+// Authors     : Joe Gorman & Lindsey Fry
+// Description : The intent of the class is to test the written
+//      methods, getMax() & noDups()
+////////////////////////////////////////////////////////////////
 class HighArrayApp
    {
    public static void main(String[] args)
