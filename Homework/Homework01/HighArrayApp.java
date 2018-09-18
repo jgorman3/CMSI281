@@ -34,7 +34,51 @@ class HighArrayApp
 
       arr.display();                // display items again
 
+      System.out.println("\ngetMax() Tests"); //tests for getMax()
+
       System.out.println(arr.getMax());
+
+      arr.delete(130);
+      arr.insert(200);
+      arr.display();
+      System.out.println(arr.getMax());
+
+      arr.delete(200);
+      arr.insert(450);
+      arr.display();
+      System.out.println(arr.getMax());
+
+      arr.delete(450);
+      arr.insert(451);
+      arr.display();
+      System.out.println(arr.getMax());
+
+      System.out.println("\nnoDups() Tests"); //tests for noDups()
       arr.noDups();
+      arr.display();
+
+      arr.insert(99);
+      arr.insert(66);
+      arr.insert(99);
+      arr.insert(99);
+      arr.display();
+      arr.noDups();
+      arr.display();
+
+      arr.insert(13);
+      arr.insert(13);
+      arr.insert(66);
+      arr.insert(13);
+      arr.display();
+      arr.noDups();
+      arr.display();
+
+      arr.insert(77);
+      arr.insert(77);
+      arr.insert(77);
+      arr.insert(45);
+      arr.display();
+      arr.noDups();
+      arr.display();
       }  // end main()
    }  // end class HighArrayApp
