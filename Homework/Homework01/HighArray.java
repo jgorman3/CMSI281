@@ -1,6 +1,8 @@
-// highArray.java
-// demonstrates array class with high-level interface
-// to run this program: C>java HighArrayApp
+// HighArray.java   1.0.0   18-September-2018
+// Purpose     : Class that edits array with help of various methods
+// Authors     : Joe Gorman & Lindsey Fry
+// Description : The intent of the exercise is to write noDups() which
+//       gets rid of duplicates and getMax() to find max value in array
 ////////////////////////////////////////////////////////////////
 class HighArray
    {
@@ -27,7 +29,7 @@ class HighArray
       else
          return true;                    // no, found it
       }  // end find()
-
+   //------------------------------------------------------------
     public long getMax() {
       if (nElems == 0) {
         return EMPTY_ARRAY;
@@ -41,7 +43,7 @@ class HighArray
       }
       return max_value;
     }
-
+   //------------------------------------------------------------
     public void noDups() {
       int count = 0;
       for (int j = 0; j < nElems; j++) {
