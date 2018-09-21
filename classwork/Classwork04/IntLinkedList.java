@@ -25,17 +25,11 @@ public class IntLinkedList {
   }
 
   public boolean insertAt(Node index, int value) {
-    Node n = new Node(value);
-    Iterator start = getIteratorAt(index);
-    n.next = start.next;
-    start.next = n.next;
-    //n = it.next();
-    //it.next = n;
-    //start = getIteratorAt(index);
-    //it = it.next();
-    //start = it.current.next;
+    Node data = new Node(value);
+    current = getIteratorAt(index);
+    data.next = current.getCurrentInt();
+    current.getCurrentInt() = data;
     return true;
-
   }
 
   public boolean removeAt(int index) {
