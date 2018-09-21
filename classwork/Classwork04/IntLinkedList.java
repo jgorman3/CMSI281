@@ -39,11 +39,12 @@ public class IntLinkedList {
   }
 
   public boolean removeAt(int index) {
-    Iterator it = new Iterator();
-    int before = index - 1;
-    start = getIteratorAt(before);
-    start.it.next = getIteratorAt(index+1);
-    return true;
+    current = getIteratorAt(index);
+    int value = current.getCurrentInt();
+    previous = getIteratorAt(index-1);
+    current.next();
+    previous = current.next();
+    return value;
   }
 
    private class Node {
