@@ -1,0 +1,27 @@
+
+Classwork03 Evaluation
+======================
+
+Sorry, but your code doesn't compile.
+The "IntLinkedList" class has a total of 12 errors.
+I can't evaluate this.  Your code style is OK, but
+you don't have any file header blocks.
+
+scores:
+=============================
+IntLinkedList.java
+   insertAt()                 [0 pt]
+   removeAt()                 [0 pt]
+IntLinkeListTester.java
+   added tests to existing    [OPTIONAL 0 pt]
+headers in all files          [0 pt]
+code style                    [1 pt]
+
+total possible points         5 points
+      additional credit       1 point
+
+
+you got 1 out of 5 which is 20% which is an F
+
+If you'd like some help understanding this, feel free
+to book an appointment with me for office hours.
