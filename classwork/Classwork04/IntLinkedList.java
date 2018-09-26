@@ -4,8 +4,7 @@ public class IntLinkedList {
 
   private Node head;
   private int size;
-  private Iterator start;
-  private Iterator next;
+  private IntLinkedList.Iterator current;
 
   //the constructor
   public IntLinkedList() {
@@ -24,21 +23,20 @@ public class IntLinkedList {
     size++;
   }
 
-  public boolean insertAt(Node index, int value) {
+  public void insertAt(int index, int value) {
     Node data = new Node(value);
-    current = getIteratorAt(index);
-    data.next = current.getCurrentInt();
-    current.getCurrentInt() = data;
-    return true;
+    current = getIteratorAt(index - 1);
+    data.next = current.currentNode.next;
+    current.currentNode.next = data;
+    size++;
   }
 
-  public boolean removeAt(int index) {
-    current = getIteratorAt(index);
-    int value = current.getCurrentInt();
-    previous = getIteratorAt(index-1);
-    current.next();
-    previous = current.next();
-    return value;
+  public void removeAt(int index) {
+    Iterator current = getIteratorAt(index);
+    Node new_node = current.currentNode.next;
+    Iterator previous = getIteratorAt(index-1);
+    previous.currentNode.next = new_node;
+    size = size - 1;
   }
 
    private class Node {
