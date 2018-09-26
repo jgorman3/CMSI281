@@ -5,6 +5,7 @@ public class IntLinkedList {
   private Node head;
   private int size;
   private IntLinkedList.Iterator current;
+  private IntLinkedList.Iterator previous;
 
   //the constructor
   public IntLinkedList() {
@@ -24,6 +25,9 @@ public class IntLinkedList {
   }
 
   public void insertAt(int index, int value) {
+    if ( index > size - 1 || index < 0 ) {
+      throw new IllegalArgumentException("Index too long!");
+    }
     Node data = new Node(value);
     current = getIteratorAt(index - 1);
     data.next = current.currentNode.next;
@@ -32,11 +36,13 @@ public class IntLinkedList {
   }
 
   public void removeAt(int index) {
-    Iterator current = getIteratorAt(index);
-    Node new_node = current.currentNode.next;
-    Iterator previous = getIteratorAt(index-1);
-    previous.currentNode.next = new_node;
-    size = size - 1;
+    if ( index > size - 1 || index < 0 ) {
+      throw new IllegalArgumentException("Index too long!");
+    }
+    Iterator curren = getIteratorAt(index - 1);
+    Node curr = curren.currentNode;
+    curr.next = curr.next.next;
+    size--;
   }
 
    private class Node {
