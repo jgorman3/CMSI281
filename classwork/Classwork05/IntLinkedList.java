@@ -1,4 +1,4 @@
-/** IntList.java   1.0.0   27-September-2018
+/** IntLinkedList.java   1.0.0   27-September-2018
 *  Purpose    : Class that works with IntQueue.java
 *  Author     : Joe Gorman
 *  Description: Implements all methods necessary for IntQueue.java
