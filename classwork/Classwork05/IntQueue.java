@@ -1,5 +1,5 @@
 /** IntQueue.java   1.0.0   27-September-2018
-*  Purpose    : Class that makes a Queue with linked list memberss
+*  Purpose    : Class that makes a Queue with linked list members
 *  Author     : Joe Gorman
 *  Description: Implements all methods necessary for queue manipulation
 */
