@@ -1,0 +1,28 @@
+
+Classwork05 Evaluation
+======================
+
+Nice job on this assignment, with a couple of comments:
+
+Looks good, but throws an IllegalArgumentException on the
+last line of your tests.  Probably because the queue is
+empty at that point and you aren't catching that fact.
+Something to remember for next time!
+
+scores:
+=============================
+IntLinkedList.java
+   compiles                [1.00]
+IntQueue.java
+   changed to Queue name   [1.00]
+   changed to enqueue()    [1.00]
+   changed to dequeue()    [1.00]
+IntQueueTester.java
+   test coverage (3)       [3.00]
+headers(3)                 [3.00]
+code style                 [1.00]
+
+total possible points      11 points
+
+you got 11 out of 11 which is 100% which is an A-plus
+
