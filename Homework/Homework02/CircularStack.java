@@ -8,15 +8,15 @@ public class CircularStack {
     }
 
     public void push( int itemToPush ) {
-
+      myStack.insertion(itemToPush);
     }
 
     public int peek() {
-            // we use the iterator
+      return myStack.searching(myStack.getCurrentInt());
     }
 
-    public int pop() {
-
+    public void pop() {
+      myStack.deletion(myStack.getCurrentInt());
     }
 
     public static void main( String[] args ) {
@@ -32,15 +32,20 @@ public class CircularStack {
        testStack.push( 51 );
        testStack.push( 57 );
        System.out.println( "The top of the stack: " + testStack.peek() );      // 57
-       System.out.println( "Removing top thing: " + testStack.pop() );         // 57 removed
+       testStack.pop();
+       System.out.println( "Removing top thing: " );         // 57 removed
+       testStack.pop();
        System.out.println( "The top of the stack: " + testStack.peek() );      // 51
-       System.out.println( "Removing top thing: " + testStack.pop() );         // 51 removed
+       testStack.pop();
+       System.out.println( "Removing top thing: " );         // 51 removed
+       testStack.pop();
        System.out.println( "The top of the stack: " + testStack.peek() );      // 47
-       System.out.println( "Removing top thing: " + testStack.pop() );         // 47 removed
+       testStack.pop();
+       System.out.println( "Removing top thing: " );         // 47 removed
        System.out.println( "The top of the stack: " + testStack.peek() );      // 43
-       testStack.pushd( testStack.pop() + testStack.pop() );
+
+       //testStack.push( testStack.pop() + testStack.pop() );
        System.out.println( "The top of the stack: " + testStack.peek() );      // what'll it be?
     }
 
   }
-}
