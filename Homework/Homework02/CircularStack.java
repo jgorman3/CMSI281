@@ -33,19 +33,28 @@ public class CircularStack {
        testStack.push( 57 );
        System.out.println( "The top of the stack: " + testStack.peek() );      // 57
        testStack.pop();
-       System.out.println( "Removing top thing: " );         // 57 removed
+       //System.out.println( "Removing top thing: " );         // 57 removed
+       System.out.println( "The top of the stack: " + testStack.peek() );
        testStack.pop();
        System.out.println( "The top of the stack: " + testStack.peek() );      // 51
        testStack.pop();
-       System.out.println( "Removing top thing: " );         // 51 removed
+       //System.out.println( "Removing top thing: " );         // 51 removed
        testStack.pop();
        System.out.println( "The top of the stack: " + testStack.peek() );      // 47
        testStack.pop();
-       System.out.println( "Removing top thing: " );         // 47 removed
+       //System.out.println( "Removing top thing: " );         // 47 removed
        System.out.println( "The top of the stack: " + testStack.peek() );      // 43
 
        //testStack.push( testStack.pop() + testStack.pop() );
        System.out.println( "The top of the stack: " + testStack.peek() );      // what'll it be?
+       testStack.pop();
+       System.out.println( "The top of the stack: " + testStack.peek() );
+       testStack.pop();
+       System.out.println( "The top of the stack: " + testStack.peek() );
+       testStack.pop();
+       System.out.println( "The top of the stack: " + testStack.peek() );
+       testStack.pop();
+       System.out.println( "The top of the stack: " + testStack.peek() );
     }
 
   }
