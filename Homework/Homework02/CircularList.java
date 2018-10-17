@@ -34,10 +34,10 @@ public class CircularList{
     for ( int i = 0; i < size; i++ ) {
       if ( current.next.data == value ) {
         current.next = current.next.next;
-        size--;
       }
       step();
     }
+    size--;
   }
 
   public void step() {
@@ -45,14 +45,24 @@ public class CircularList{
   }
 
   public int searching(int value){
-    for (int i = 1; i < size; i++) {
-      if (value == current.data) {
-        value = current.data;
-        break;
-      }
+    if (current.data == value) {
+      System.out.println(value + " is in the list.");
+      return value;
     }
-    return value;
-  }
+    else {
+      step();
+    }
+    //while (value != current.data) {
+    for (int i = 0; i < size; i++){
+      if (current.data == value) {
+        System.out.println(value + " is in the list.");
+        return value;
+      }
+        step();
+      }
+      System.out.println(value + " is not in the list.");
+      return -99;
+    }
 
   public void printList() {
     System.out.print("Circular List: ");
@@ -78,3 +88,4 @@ public class CircularList{
       }
    }
 }
+
