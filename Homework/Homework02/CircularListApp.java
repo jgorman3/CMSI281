@@ -27,26 +27,23 @@ class CircularListApp
     System.out.println(myList.getSize());
     myList.printList();
 
+    //will be in
+    myList.searching(23);
+    myList.searching(19);
     myList.searching(17);
-    //System.out.println( "Current Node is: " + myIt.getCurrentInt() );    // 2
-    //myIt.next();
-    //System.out.println( "Current Node is: " + myIt.getCurrentInt() );    // 3
-    //myIt.next();
-    //System.out.println( "Current Node is: " + myIt.getCurrentInt() );    // 5
-    //myIt.next();
-    //System.out.println( "Current Node is: " + myIt.getCurrentInt() );    // 7
-    //myIt = myList.getIteratorAt( 3 );
-    //System.out.println( "Current Node is: " + myIt.getCurrentInt() );    // 7
-    /*myIt.next();
-    System.out.println( "Current Node is: " + myIt.getCurrentInt() );    // 11
-    myIt.next();
-    System.out.println( "Current Node is: " + myIt.getCurrentInt() );    // 13
-    myIt.next();
-    System.out.println( "Current Node is: " + myIt.getCurrentInt() );    // 17
-    myIt.next();
-    System.out.println( "Current Node is: " + myIt.getCurrentInt() );    // 19
-    myIt.next();
-    System.out.println( "Current Node is: " + myIt.getCurrentInt() );    // 23
-    */
+    myList.searching(13);
+    myList.searching(5);
+    myList.searching(3);
+    myList.searching(2);
+
+    //not be in
+    myList.searching(1);
+    myList.searching(40);
+    myList.searching(50);
+    myList.searching(60);
+    myList.searching(70);
+    myList.searching(80);
+    myList.searching(90);
+
   }
 }
