@@ -4,29 +4,47 @@
 // Description : The intent of this class is to test the methods
 //               in Queue.java
 ////////////////////////////////////////////////////////////////
-class QueueApp
-{
-  public static void main(String[] args)
-  {
-    Queue theQueue = new Queue(5); // queue holds 5 items
-    theQueue.insert(10); // insert 4 items
-    theQueue.insert(20);
-    theQueue.insert(30);
-    theQueue.insert(40);
-    theQueue.remove();   // remove 3 items
-    theQueue.remove();   // (10, 20, 30)
-    theQueue.remove();
-    theQueue.insert(50); // insert 4 more items
-    theQueue.insert(60); // (wraps around)
-    theQueue.insert(70);
-    theQueue.insert(80);
-    theQueue.dispQueue();
-    //while( !theQueue.isEmpty() ) // remove and display
-    //{ // all items
-    //  long n = theQueue.remove(); // (40, 50, 60, 70, 80)
-    //  System.out.print(n);
-    //  System.out.println(' ');
-    //}
-    //System.out.println(' ');
-  } // end main()
-} // end class QueueApp
+
+public class QueueApp {
+  public static void main( String args[] ) {
+    Queue newQueue = new Queue(5);
+
+    //testing insert
+    System.out.println( "Test Insert" );
+    newQueue.insert( 1 );
+    newQueue.insert( 5 );
+    newQueue.insert( 32 );
+    newQueue.insert( 3 );
+    newQueue.displayQueue( );
+
+
+    //testing remove
+    System.out.println( "Test Remove" );
+    newQueue.remove();
+    System.out.println( " Remove 1 " );
+    newQueue.remove();
+    System.out.println( " Remove 5 " );
+    newQueue.remove();
+    System.out.println( " Remove 32 " );
+    newQueue.displayQueue( );
+
+    //testing wraparound
+    System.out.println( "Test Wrap Around " );
+    newQueue.insert( 14 );
+    newQueue.insert( 12 );
+    newQueue.insert( 45 );
+    //newQueue.insert( 48 );
+    newQueue.displayQueue( );
+
+    // testing displayQueue
+    System.out.println( "Test Display " );
+    System.out.print( " Current queue: " );
+    newQueue.displayQueue( );
+    System.out.println();
+
+    System.out.println( " Adding 13 " );
+    newQueue.insert( 13 );
+    System.out.print( " Current queue: " );
+    newQueue.displayQueue();
+  }
+}
