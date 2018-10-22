@@ -1,3 +1,10 @@
+// Deque.java   1.0.0   21-October-2018
+// Purpose     : Class that implements double ended queue 
+//               (FLIFLO) data structure
+// Authors     : Joe Gorman & Lindsey Fry
+// Description : The intent of the this class is to be able to 
+//               access data from the back and front of sequential list
+////////////////////////////////////////////////////////////////
 class Deque {
 
   private int maxSize;
