@@ -1,3 +1,8 @@
+// HighArray.java   1.0.0   21-October-2018
+// Purpose     : Class that implements Queue.java
+// Authors     : Joe Gorman & Lindsey Fry
+// Description : The intent of this class is to test the methods
+//               in Queue.java
 ////////////////////////////////////////////////////////////////
 class QueueApp
 {
