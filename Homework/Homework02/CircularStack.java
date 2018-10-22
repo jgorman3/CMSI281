@@ -2,6 +2,7 @@ public class CircularStack {
 
 
     CircularList myStack;
+    int popCount;
 
     CircularStack() {
       myStack = new CircularList();         // constructor
@@ -12,11 +13,34 @@ public class CircularStack {
     }
 
     public int peek() {
-      return myStack.searching(myStack.getCurrentInt());
+      int value = 0;
+      if (popCount == 0){
+        popCount++;
+        return myStack.searching(myStack.getCurrentInt());
+      }
+      else {
+        for (int i = 0; i < myStack.getSize() - popCount; i++){
+          myStack.step();
+        }
+        value = myStack.searching(myStack.getCurrentInt());
+        return value;
+      }
     }
 
     public void pop() {
       myStack.deletion(myStack.getCurrentInt());
+    }
+
+    public void printList() {
+      myStack.printList();
+    }
+
+    public void step() {
+      myStack.step();
+    }
+
+    public int getSize() {
+      return myStack.getSize();
     }
 
     public static void main( String[] args ) {
@@ -31,29 +55,44 @@ public class CircularStack {
        testStack.push( 47 );
        testStack.push( 51 );
        testStack.push( 57 );
-       System.out.println( "The top of the stack: " + testStack.peek() );      // 57
-       testStack.pop();
-       //System.out.println( "Removing top thing: " );         // 57 removed
-       System.out.println( "The top of the stack: " + testStack.peek() );
-       testStack.pop();
-       System.out.println( "The top of the stack: " + testStack.peek() );      // 51
-       testStack.pop();
-       //System.out.println( "Removing top thing: " );         // 51 removed
-       testStack.pop();
-       System.out.println( "The top of the stack: " + testStack.peek() );      // 47
-       testStack.pop();
-       //System.out.println( "Removing top thing: " );         // 47 removed
-       System.out.println( "The top of the stack: " + testStack.peek() );      // 43
 
-       //testStack.push( testStack.pop() + testStack.pop() );
-       System.out.println( "The top of the stack: " + testStack.peek() );      // what'll it be?
-       testStack.pop();
+       testStack.printList();
        System.out.println( "The top of the stack: " + testStack.peek() );
        testStack.pop();
+
+       testStack.printList();
        System.out.println( "The top of the stack: " + testStack.peek() );
        testStack.pop();
+
+       testStack.printList();
        System.out.println( "The top of the stack: " + testStack.peek() );
        testStack.pop();
+
+       testStack.printList();
+       System.out.println( "The top of the stack: " + testStack.peek() );
+       testStack.pop();
+
+       testStack.printList();
+       System.out.println( "The top of the stack: " + testStack.peek() );
+       testStack.pop();
+
+       testStack.printList();
+       System.out.println( "The top of the stack: " + testStack.peek() );
+       testStack.pop();
+
+       testStack.printList();
+       System.out.println( "The top of the stack: " + testStack.peek() );
+       testStack.pop();
+
+       testStack.printList();
+       System.out.println( "The top of the stack: " + testStack.peek() );
+       testStack.pop();
+
+       testStack.printList();
+       System.out.println( "The top of the stack: " + testStack.peek() );
+       testStack.pop();
+       
+       testStack.printList();
        System.out.println( "The top of the stack: " + testStack.peek() );
     }
 
