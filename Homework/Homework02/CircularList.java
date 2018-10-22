@@ -1,3 +1,9 @@
+// CircularList.java   1.0.0   21-October-2018
+// Purpose     : Class that implements a circular singly-linked list
+// Authors     : Joe Gorman & Lindsey Fry
+// Description : The intent of the exercise is to create a list with 
+//               no beginning or end and only one one node reference
+////////////////////////////////////////////////////////////////
 import java.lang.Exception;
 
 public class CircularList{
@@ -44,6 +50,10 @@ public class CircularList{
     current = current.next;
   }
 
+  public void stepDown() {
+    current.next = current;
+  }
+
   public int searching(int value){
     if (current.data == value) {
       System.out.println(value + " is in the list.");
@@ -52,7 +62,6 @@ public class CircularList{
     else {
       step();
     }
-    //while (value != current.data) {
     for (int i = 0; i < size; i++){
       if (current.data == value) {
         System.out.println(value + " is in the list.");
@@ -61,14 +70,14 @@ public class CircularList{
         step();
       }
       System.out.println(value + " is not in the list.");
-      return -99;
+      return -1;
     }
 
   public void printList() {
     System.out.print("Circular List: ");
     for (int i = 0; i < size; i++){
       System.out.print(current.data + " ");
-      current = current.next;
+      step();
     }
     System.out.println();
   }
