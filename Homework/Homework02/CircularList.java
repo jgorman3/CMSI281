@@ -2,7 +2,7 @@
 // Purpose     : Class that implements a circular singly-linked list
 // Authors     : Joe Gorman & Lindsey Fry
 // Description : The intent of the exercise is to create a list with 
-//               no beginning or end and only one one node reference
+//               no beginning or end. The list only has one node reference.
 ////////////////////////////////////////////////////////////////
 import java.lang.Exception;
 
@@ -87,8 +87,8 @@ public class CircularList{
   }
 
    private class Node {
-      int data;               //remember this is an "IntLinkedList"
-      Node next;              //here's the self-referential part
+      int data;              
+      Node next;             
 
       // constructor
       public Node(int d) {
