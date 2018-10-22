@@ -1,6 +1,8 @@
-// queue.java
-// demonstrates queue
-// to run this program: C>java QueueApp
+// Queue.java   1.0.0   21-October-2018
+// Purpose     : Class that implements a queue (FIFO) data structure
+// Authors     : Joe Gorman & Lindsey Fry
+// Description : The intent of the exercise is create a queue with 
+//               an underlying sequential list
 ////////////////////////////////////////////////////////////////
 class Queue
 {
