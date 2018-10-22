@@ -1,3 +1,10 @@
+
+// CircularStack.java   1.0.0   21-October-2018
+// Purpose     : Class that implements a Stack Data Structure (LIFO) from Circular List
+// Authors     : Joe Gorman & Lindsey Fry
+// Description : The intent of the exercise is to create a list with 
+//               no beginning or end and only one one node reference
+////////////////////////////////////////////////////////////////
 public class CircularStack {
 
 
