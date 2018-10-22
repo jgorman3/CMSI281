@@ -1,3 +1,10 @@
+
+// CircularListApp.java   1.0.0   21-October-2018
+// Purpose     : Class that tests a circular singly-linked list
+// Authors     : Joe Gorman & Lindsey Fry
+// Description : The intent of the exercise is to test each method 
+//               and print various circular list manipulations
+////////////////////////////////////////////////////////////////
 class CircularListApp
 {
   public static void main(String[] args)
