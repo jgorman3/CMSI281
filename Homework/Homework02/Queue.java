@@ -12,12 +12,6 @@ private int front;
 private int rear;
 private int nItems;
 
-/*Write a method for the Queue class in the queue.java program (Listing 4.4)
-that displays the contents of the queue. Note that this does not mean simply
-displaying the contents of the underlying array. You should show the queue contents
-from the first item inserted to the last, without indicating to the viewer whether
-the sequence is broken by wrapping around the end of the array. Be careful that one
-item and no items display properly, no matter where front and rear are*/
 //--------------------------------------------------------------
 public Queue(int s) // constructor
 {
