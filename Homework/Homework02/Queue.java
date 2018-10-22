@@ -4,71 +4,62 @@
 // Description : The intent of the exercise is create a queue with 
 //               an underlying sequential list
 ////////////////////////////////////////////////////////////////
-class Queue
-{
-private int maxSize;
-private long[] queArray;
-private int front;
-private int rear;
-private int nItems;
+public class Queue{
+  private int maxSize;
+  private int front;
+  private int rear;
+  private int nItems;
+  private long[] qArray;
 
-//--------------------------------------------------------------
-public Queue(int s) // constructor
-{
-  maxSize = s;
-  queArray = new long[maxSize];
-  front = 0;
-  rear = -1;
-  nItems = 0;
-}
-//--------------------------------------------------------------
-public void insert(long j) // put item at rear of queue
-{
-  if(rear == maxSize-1) // deal with wraparound
-    rear = -1;
-  queArray[++rear] = j; // increment rear and insert
-  nItems++; // one more item
-}
-//--------------------------------------------------------------
-public long remove() // take item from front of queue
-{
-  long temp = queArray[front++]; // get value and incr front
-  if(front == maxSize) // deal with wraparound
+  //constructor
+  public Queue( int size ){
+    maxSize = size;
     front = 0;
-  nItems--; // one less item
-  return temp;
-}
-//--------------------------------------------------------------
-public long peekFront() // peek at front of queue
-{
-  return queArray[front];
-}
-//--------------------------------------------------------------
-public void dispQueue(){
-  if (isEmpty() == true) {
-    System.out.println("Queue is empty!");
+    rear = -1;
+    nItems = 0;
+    qArray = new long[maxSize];
   }
-  if (maxSize == 1){
-    System.out.println(peekFront());
+
+  //Inserts element at end of Queue
+  public void insert( long i ){
+    if(rear == maxSize - 1){
+      rear = -1;
+    }
+    qArray[++rear] = i;
+    nItems++;
+    }
+
+
+  //removes the items at the front and returns value
+  public long remove() {
+    long t = qArray[front++];
+    if( front == maxSize ){
+      front = 0;
+    }
+    nItems--;
+    return t;
   }
-  for (int i = 0; i < nItems; i++){
-    System.out.println(queArray[i]);
+
+  //returns value at the Front
+  public long peek(){
+    return qArray[front];
+  }
+
+  public boolean isEmpty(){
+    return (nItems == 0);
+  }
+
+  public void displayQueue(){
+    int index = front;
+    for( int k = 0; k < nItems; k++){
+      System.out.print( qArray[index] + " " );
+      if( index == maxSize - 1){
+        index = 0;
+      }
+      else{
+        index++;
+      }
+    }
+    System.out.println();
   }
 }
-//--------------------------------------------------------------
-public boolean isEmpty() // true if queue is empty
-{
-  return (nItems==0);
-}
-//--------------------------------------------------------------
-public boolean isFull() // true if queue is full
-{
-  return (nItems==maxSize);
-}
-//--------------------------------------------------------------
-public int size() // number of items in queue
-{
-  return nItems;
-}
-//--------------------------------------------------------------
-} // end class Queue
