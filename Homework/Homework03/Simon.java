@@ -1,6 +1,7 @@
 //class that implements Simon Says game
 import java.util.Scanner;
 import java.util.Random;
+import java.lang.Thread;
 
 public class Simon{
 
@@ -11,6 +12,7 @@ public class Simon{
   private String yellow = "Y";
   private String green = "G";
   private Simon.Iterator current;
+  private String[] simon = {blue, red, yellow, green};
 
   public Simon(){
     head = null;
@@ -87,11 +89,28 @@ public class Simon{
 
   public static void main(String[] args){
     Simon game = new Simon();
-    System.out.println("Welcome to Simon Says!");
-    System.out.println(game.randomDisk());
-    System.out.println(game.randomDisk());
-    System.out.println(game.randomDisk());
-    System.out.println(game.randomDisk());
-
+    System.out.println("Welcome to Simon Says!\n");
+    System.out.println("Here is the first disk.");
+    game.prepend(game.randomDisk());
+    Simon.Iterator myIt = game.getIteratorAt(0);
+    System.out.print(myIt.getCurrentString());
+    try {
+      Thread.sleep(1000);
+    }
+    catch(InterruptedException ex) {
+      Thread.currentThread().interrupt();
+    }
+    System.out.print("\b");
+    System.out.println(" ");
+    System.out.println("Print the sequence below!");
+    Scanner input = new Scanner(System.in);
+    String response = input.nextLine();
+    if (response == myIt.getCurrentString() + "\n") {
+      System.out.println("Congratulations, here is the next sequence!");
+    }
+    else {
+      System.out.println("Game over, you have lost.");
+      System.exit(0);
+    }
+    }
   }
-}
