@@ -1,6 +1,7 @@
 //class that implements Simon Says game
 import java.util.Scanner;
 import java.util.Random;
+import java.util.Arrays;
 import java.lang.Thread;
 
 public class Simon{
@@ -13,16 +14,34 @@ public class Simon{
   private String green = "G";
   private Simon.Iterator current;
   private String[] simon = {blue, red, yellow, green};
+  private String[] gameArray = new String[100];
+  private int turn;
 
   public Simon(){
     head = null;
     size = 0;
   }
 
-  public String randomDisk(){
+  public void randomDisk(int turnPlay){
     Random rand = new Random();
-    int randInt = rand.nextInt(4);
-    return simon[randInt];
+    for (int i = 0; i< turnPlay; i++){
+      int randInt = rand.nextInt(4);
+      gameArray[i] = simon[randInt];
+      System.out.print(gameArray[i]);
+    }
+  }
+
+  public boolean arrayCompare(int turnPlay,String response){
+    String concat = "B";
+    for (int i = 0; i< turnPlay; i++){
+      concat = gameArray[i];
+    }
+    if (concat.equals(response)){
+      return true;
+    }
+    else{
+      return false;
+    }
   }
 
   public int getSize() {
@@ -86,31 +105,38 @@ public class Simon{
   }
 
   //simon game
-
   public static void main(String[] args){
-    Simon game = new Simon();
+    int turn = 1;
+    boolean play = true;
     System.out.println("Welcome to Simon Says!\n");
-    System.out.println("Here is the first disk.");
-    game.prepend(game.randomDisk());
-    Simon.Iterator myIt = game.getIteratorAt(0);
-    System.out.print(myIt.getCurrentString());
-    try {
-      Thread.sleep(1000);
+    while (play){
+      Simon game = new Simon();
+      System.out.println("Here is the sequence.");
+      game.randomDisk(turn);
+      try {
+        Thread.sleep(1000);
+      }
+      catch(InterruptedException ex) {
+        Thread.currentThread().interrupt();
+      }
+      for (int i=0;i < turn;i++){
+        System.out.print("\b");
+      }
+      for (int i=0;i < turn;i++){
+        System.out.println(" ");
+      }
+      System.out.println("What is the sequence?");
+      Scanner input = new Scanner(System.in);
+      String response = input.next();
+      System.out.println(game.arrayCompare(turn,response));
+      if (game.arrayCompare(turn,response)){
+        System.out.println("Congratulations! Onto the next round.");
+        turn++;
+      }
+      else {
+        System.out.println("Thanks for playing.");
+        play = false;
+      }
     }
-    catch(InterruptedException ex) {
-      Thread.currentThread().interrupt();
-    }
-    System.out.print("\b");
-    System.out.println(" ");
-    System.out.println("Print the sequence below!");
-    Scanner input = new Scanner(System.in);
-    String response = input.nextLine();
-    if (response == myIt.getCurrentString() + "\n") {
-      System.out.println("Congratulations, here is the next sequence!");
-    }
-    else {
-      System.out.println("Game over, you have lost.");
-      System.exit(0);
-    }
-    }
+  }
   }
