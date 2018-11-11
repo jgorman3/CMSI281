@@ -1,0 +1,66 @@
+
+Homework03 Evaluation
+======================
+
+Nice work on this assignment!
+Here are a couple of observations and comments:
+
+It's better to NOT use long lines of dashes to separate the
+blocks of code in your file.  I know the book does it, but it's
+kind of jarring when reading the code.  Instead, try using the
+JavaDocs convention, like this:
+
+/**
+ *  this method blah blah blah woof woof
+ * @param whatever
+ * @param whatever
+ * @returns something
+ * @throws  SomeException
+ */
+
+THANK YOU for the file headers!  Very helpful.
+
+Try to add a few more tests next time, to make sure you check things
+like zero values, lists that are already sorted, negative numbers,
+lists that are sorted in reverse order, palindromes, duplicates, and
+so on.  It's also useful to output what is going on, like "testing
+blah blah bozo bozo, expecting 1 2 3 4 5" and then the result, "got
+1 2 3 4 5".
+
+The Simon game is awesome!  Great work.
+
+scores:
+=============================
+XXXXX-Sorter.java
+   oddEvenSort implemented                   [1 pt.]
+   compiles                                  [1 pt.]
+   works as advertised                       [1 pt.]
+
+SimonGame.java
+   randomized array                          [1 pt.]
+   display/erase sequences                   [1 pt.]
+   check user's guess against array          [1 pt.]
+   increment letter count each iteration     [1 pt.]
+   play again message on incorrect entry     [1 pt.]
+   compiles                                  [1 pt.]
+   works as advertised                       [1 pt.]
+
+HuffmanCoding.java
+   count character occurrences               [0 pt.]
+   use some sort of queue to build tree      [0 pt.]
+   tree constructed correctly                [0 pt.]
+   message encoded correctly                 [0 pt.]
+   message decoded correctly                 [0 pt.]
+   compiles                                  [0 pt.]
+   works as advertised                       [0 pt.]
+
+Coding style                                 [1 pt.]
+Tests written to test all classes            [1 pt.]
+Headers in all files                         [1 pt.]
+
+Total credit is 13 for Sorter and either Simon or Huffman
+ extra credit is 7 points for other of Simon or Huffman
+-------------------------
+ Grand total is 20 points for all three
+
+you got 13 out of 13 which is 100% which is an A-plus
