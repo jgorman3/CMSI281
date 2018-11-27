@@ -1,6 +1,9 @@
-//Write a method that does an in–order traverse of a tree. It should display
-//all the items in the proper order. Remember that in–order means you visit
-//the left sub–tree, then the current node, then the right sub–tree.
+/** BinaryTree.java   1.0.0   27-November-2018
+*  Purpose    : Class that executes in order traversal with BinaryTreeNode
+*  Author     : Joe Gorman & Lindsey Fry
+*  Description: The intent of this program is to traverse through a 
+*               tree in the following order: left, current, right
+**/
 public class BinaryTree {
 
   public static void inOrderPrinter( BinaryTreeNode node ) {
