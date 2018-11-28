@@ -1,22 +1,4 @@
-
 import java.io.*;
-////////////////////////////////////////////////////////////////
-//integer data!!
-//class DataItem { // (could have more data)
-//  private int iData; // data item (key)
-//--------------------------------------------------------------
-//  public DataItem(int ii) // constructor
-//  {
-//    iData = ii;
-//  }
-//--------------------------------------------------------------
-//  public int getKey()
-//  {
-//    return iData;
-//  }
-//--------------------------------------------------------------
-//} // end class DataItem
-//string data!!
 
 class DataItem { // (could have more data)
   private String iData; // data item (key)
@@ -61,7 +43,27 @@ class HashTable {
 // -------------------------------------------------------------
   public int hashFunc(String key)
   {
-    return key.length(); // hash function
+    //return key.length() % arraySize;
+    //return java.lang.Character.hashCode(key) % arraySize;
+    //return key.length(); // hash function
+    //int hash = 0;
+    //String str = "";
+    //String[] alpha = {"a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r",
+    //"s","t","u","v","w","x","y","z"};
+    int sum = 0;
+    int hash = 0;
+    for (int i = 0; i < key.length(); i++){
+      sum = (int) key.charAt(i) - 65;
+      hash = hash + sum;
+      //String str = String.valueOf(key.charAt(i));
+      //for (int j = 0; j < alpha.length(), j++){
+      //  if str.isequal(alpha[j]){
+      //    hash == j;
+      //    break;
+      //  }
+      //}
+    }
+    return hash;
   }
 // -------------------------------------------------------------
   public void insert(DataItem item){ // insert a DataItem
