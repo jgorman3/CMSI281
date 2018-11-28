@@ -1,3 +1,12 @@
+
+/** BinaryTreeNode.java   1.0.0   27-November-2018
+*  Purpose    : Class that supports tree operations by 
+                creating tree nodes
+*  Author     : Joe Gorman & Lindsey Fry
+*  Description: The intent of this program is to create methods
+*               that will aid in developing trees. Trees are built
+*               from the BinaryTreeNode class.
+**/
 public class BinaryTreeNode {
 
    private int data;
