@@ -1,5 +1,5 @@
-
 /** BinaryTreeNode.java   1.0.0   27-November-2018
+**** PROBLEM 1
 *  Purpose    : Class that supports tree operations by 
                 creating tree nodes
 *  Author     : Joe Gorman & Lindsey Fry
