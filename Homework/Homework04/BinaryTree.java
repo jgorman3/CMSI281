@@ -1,4 +1,5 @@
 /** BinaryTree.java   1.0.0   27-November-2018
+**** PROBLEM #1
 *  Purpose    : Class that executes in order traversal with BinaryTreeNode
 *  Author     : Joe Gorman & Lindsey Fry
 *  Description: The intent of this program is to traverse through a 
