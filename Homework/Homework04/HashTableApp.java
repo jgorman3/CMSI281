@@ -1,3 +1,11 @@
+/** HashTable.java   1.0.0   27-November-2018
+**** PROBLEM 3
+*  Purpose    : Class that does hash code and inserts, finds,
+                and deletes from hash table
+*  Author     : Joe Gorman & Lindsey Fry
+*  Description: The intent of this program is to create methods
+*               that will aid in developing hash tables.
+**/
 import java.io.*;
 
 class DataItem { // (could have more data)
