@@ -1,3 +1,10 @@
+/** HashTableApp.java   1.0.0   27-November-2018
+**** PROBLEM 3
+*  Purpose    : Class that tests HashTable.java
+*  Author     : Joe Gorman & Lindsey Fry
+*  Description: The intent of this tester is to 
+*               help prove HashTable.java works
+**/
 import java.io.*;
 import java.util.Random;
 
