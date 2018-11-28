@@ -6,7 +6,8 @@ class HashTableApp
 public static void main(String[] args) throws IOException {
   String[] animals = {"dog", "cow", "sheep", "cat", "horse", "lions", "bears"};
   DataItem aDataItem;
-  int size, n, keysPerCell;
+  int size = 10000;
+  int n, keysPerCell;
   String aKey;
   //Open Addressing 537
   // get sizes
